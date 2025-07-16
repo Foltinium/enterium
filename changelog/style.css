@@ -20,7 +20,16 @@ h1 {
     margin: 0;
 }
 
+img.item {
+    image-rendering: pixelated;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 2px;
+}
+
 a {
+    color: #88f;
     font-size: 20px;
 }
 
@@ -121,6 +130,10 @@ li {
 
 .lapis {
     color: #0a3eff;
+}
+
+.emerald {
+    color: #10DE62;
 }
 
 .diamond {
