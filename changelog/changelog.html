@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../main.css">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Enterium</title>
@@ -13,14 +14,6 @@
         <h1><a href="../index.html">Enterium</a>/<span id="logo">Изменения</span></h1>
     </header>
     <main>
-        <div id="side" class="container">
-            <h2 class="date">Таблица лута</h2>
-            <div class="container">
-                <ul>
-                    <li><a href="loot_table/blocks/blocks.html">Блоки</a></li>
-                </ul>
-            </div>
-        </div>
         <div id="main" class="container">
             <div class="container">
                 <h2 class="date">18.02.2025</h2>
@@ -41,11 +34,17 @@
                 </div>
             </div>
             <div class="container">
+                <h2 class="date">26.02.2025</h2>
+                <div class="data">
+                    <p>Остановка разработки.</p>
+                </div>
+            </div>
+            <div class="container">
                 <h2 class="date">12.07.2025</h2>
                 <div class="data">
+                    <p>Возобновление разработки.</p>
                     <p>Начало разработки механики отделок брони: каждый кузнечный шаблон в зависимости от своего типа
-                        будет
-                        давать определённые баффы/дебаффы носителю.</p>
+                        и материала будет давать определённые баффы/дебаффы носителю.</p>
                     <p>Скоро: полный сет брони с отделкой "Берег" будет давать положительные эффекты, связанные с водой.
                     </p>
                 </div>
@@ -54,39 +53,73 @@
                 <h2 class="date">13.07.2025</h2>
                 <div class="data">
                     <p>Полный сет брони с одинаковыми отделкой и материалом дают эффекты игроку.</p>
-                    <p>Обновление отделки <img src="../assets/coast_armor_trim_smithing_template.png" class="item"><span
-                            class="trim">Берег</span>:</p>
+                    <p>Обновление отделки <img src="../assets/items/coast_armor_trim_smithing_template.png"
+                            class="item"><span class="trim uncommon">Берег</span>:</p>
                     <ul>
-                        <li><img src="../assets/lapis_lazuli.png" class="item"><span class="lapis">Лазурит</span> —
-                            грация дельфина
-                            1;</li>
-                        <li><img src="../assets/diamond.png" class="item"><span class="diamond">Алмаз</span> — сила
-                            источника 1;</li>
-                        <li><img src="../assets/netherite_ingot.png" class="item"><span class="netherite">Незерит</span>
+                        <li><img src="../assets/items/lapis_lazuli.png" class="item"><span
+                                class="material lapis">Лазурит</span>
                             —
-                            совокупность эффектов от <img src="../assets/lapis_lazuli.png" class="item"><span
-                                class="lapis">лазурита</span> и <img src="../assets/diamond.png" class="item"><span
-                                class="diamond">алмаза</span>.</li>
+                            <span class="effect dolphins_grace">грация дельфина</span>
+                            1;
+                        </li>
+                        <li><img src="../assets/items/diamond.png" class="item"><span
+                                class="material diamond">Алмаз</span> — <span class="effect conduit_power">сила
+                                источника</span> 1;</li>
+                        <li><img src="../assets/items/netherite_ingot.png" class="item"><span
+                                class="material netherite">Незерит</span> — совокупность эффектов от <img
+                                src="../assets/items/lapis_lazuli.png" class="item"><span
+                                class="material lapis">лазурита</span> и <img src="../assets/items/diamond.png"
+                                class="item"><span class="material diamond">алмаза</span>.</li>
                     </ul>
                 </div>
             </div>
             <div class="container">
                 <h2 class="date">16.07.2025</h2>
                 <div class="data">
-                    <p>Обновление отделки <img src="../assets/host_armor_trim_smithing_template.png" class="item"><span
-                            class="trim">Вождь</span> (эффекты применяются в радиусе 5 блоков от
-                        игрока):</p>
+                    <p>Обновление отделки <img src="../assets/items/host_armor_trim_smithing_template.png"
+                            class="item"><span class="trim uncommon">Вождь</span> (эффекты применяются в радиусе 5
+                        блоков от игрока):</p>
                     <ul>
-                        <li><img src="../assets/emerald.png" class="item"><span class="emerald">Изумруд</span> —
-                            скорость 1 на прирученных волков и замедление 1 на
-                            игрока;</li>
-                        <li><img src="../assets/diamond.png" class="item"><span class="diamond">Алмаз</span> — сила 1 на
-                            прирученных волков и слабость 1 на игрока;
+                        <li><img src="../assets/items/emerald.png" class="item"><span
+                                class="material emerald">Изумруд</span> —
+                            <span class="effect speed">скорость</span> 1 на прирученных волков и <span
+                                class="effect slowness">замедление</span> 1 на
+                            игрока;
                         </li>
-                        <li><img src="../assets/netherite_ingot.png" class="item"><span class="netherite">Незерит</span>
-                            — совокупность эффектов от <img src="../assets/emerald.png" class="item"><span
-                                class="emerald">изумруда</span> и <img src="../assets/diamond.png" class="item"><span
-                                class="diamond">алмаза</span>.</li>
+                        <li><img src="../assets/items/diamond.png" class="item"><span
+                                class="material diamond">Алмаз</span> —
+                            <span class="effect strength">сила</span> 1 на прирученных волков и <span
+                                class="effect weakness">слабость</span> 1 на игрока;
+                        </li>
+                        <li><img src="../assets/items/netherite_ingot.png" class="item"><span
+                                class="material netherite">Незерит</span>
+                            — совокупность эффектов от <img src="../assets/items/emerald.png" class="item"><span
+                                class="material emerald">изумруда</span> и <img src="../assets/items/diamond.png"
+                                class="item"><span class="material diamond">алмаза</span>.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <h2 class="date">22.07.2025</h2>
+                <div class="data">
+                    <p>Обновление отделки <img src="../assets/items/silence_armor_trim_smithing_template.png"
+                            class="item"><span class="trim epic">Тишина</span>:</p>
+                    <ul>
+                        <li><img src="../assets/items/amethyst_shard.png" class="item"><span
+                                class="material amethyst">Аметист</span> —
+                            <span class="effect speed">скорость</span> 1 на блоке скалка или <span
+                                class="effect speed">скорость</span> 2 в биоме тёмных глубин;
+                        </li>
+                        <li><img src="../assets/items/diamond.png" class="item"><span
+                                class="material diamond">Алмаз</span> —
+                            <span class="effect regeneration">регенерация</span> 1 на блоке скалка или <span
+                                class="effect regeneration">регенерация</span> 2 в биоме тёмных глубин;
+                        </li>
+                        <li><img src="../assets/items/netherite_ingot.png" class="item"><span
+                                class="material netherite">Незерит</span>
+                            — совокупность эффектов от <img src="../assets/items/amethyst_shard.png" class="item"><span
+                                class="material amethyst">аметиста</span> и <img src="../assets/items/diamond.png"
+                                class="item"><span class="material diamond">алмаза</span>.</li>
                     </ul>
                 </div>
             </div>

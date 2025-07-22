@@ -1,6 +1,7 @@
 body {
     background-color: #1e2129;
     color: #fff;
+    font-size: 18px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
 }
@@ -13,11 +14,16 @@ header {
     margin-bottom: 16px;
     position: sticky;
     top: 0;
+    z-index: 1;
+}
+
+h1,
+h2 {
+    margin: 0;
 }
 
 h1 {
     font-weight: 100;
-    margin: 0;
 }
 
 #logo {
@@ -34,11 +40,33 @@ a:hover {
 }
 
 h1 a {
+    color: inherit;
     font-size: inherit;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
 }
 
 h2 a {
     display: inline-block;
     font-size: 22px;
     margin: 0;
+}
+
+
+img.item {
+    image-rendering: pixelated;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 2px;
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 1.4em;
+    }
 }
