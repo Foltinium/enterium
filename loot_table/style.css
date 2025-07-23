@@ -1,0 +1,48 @@
+a {
+    color: inherit;
+}
+
+h1,
+h2 {
+    color: #b0ffb0;
+}
+
+header h2 {
+    color: inherit;
+}
+
+main {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 0.75rem 1rem;
+    border: 1px solid #444;
+    text-align: left;
+}
+
+#head {
+    background-color: inherit;
+}
+
+thead {
+    background-color: #3e3e3e;
+}
+
+tr:nth-child(even) {
+    background-color: #242424;
+}
+
+tr:hover {
+    background-color: #383838;
+}

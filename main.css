@@ -1,61 +1,96 @@
 body {
-    background-color: #1e2129;
-    color: #fff;
-    font-size: 18px;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
 }
 
 header {
-    padding: 4px;
-    backdrop-filter: blur(3px);
-    border-bottom: 2px solid #00f;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .33);
-    margin-bottom: 16px;
-    position: sticky;
-    top: 0;
-    z-index: 1;
+    background: linear-gradient(90deg, #3B523B, #DBFFD6, #729B6D);
+    padding: 1rem;
+    text-align: center;
+    color: #2b1f1f;
 }
 
 h1,
-h2 {
+h2,
+h3 {
     margin: 0;
 }
 
-h1 {
-    font-weight: 100;
+header h1,
+header h2 {
+    font-size: 2.5rem;
 }
 
-#logo {
-    font-weight: 900;
+nav,
+footer {
+    background-color: #222;
 }
 
-a {
-    color: #88f;
-    font-size: 20px;
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
 }
 
-a:hover {
-    text-decoration: underline dashed;
+nav a,
+.datapack {
+    color: #9e9;
+    font-weight: bold;
 }
 
-h1 a {
-    color: inherit;
-    font-size: inherit;
+header a,
+nav a {
     text-decoration: none;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
+header a:hover,
+nav a:hover {
+    text-decoration: underline;
 }
 
-h2 a {
-    display: inline-block;
-    font-size: 22px;
+main {
+    max-width: 1000px;
+    padding: 0 1rem;
+    margin: 2rem auto;
+}
+
+section {
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.block {
+    background-color: #2a2a2a;
+    padding: .5rem;
+    border-radius: 12px;
+    margin-top: 1rem;
+}
+
+p {
+    margin: .5rem 0;
+}
+
+strong {
+    color: #b0b;
+    font-size: 1.25rem;
+}
+
+ul {
+    list-style-type: square;
+    padding: .1rem 0 .1rem 1.2rem;
     margin: 0;
 }
 
+footer {
+    color: #ccc;
+    text-align: center;
+    padding: 0.5rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
 
 img.item {
     image-rendering: pixelated;
@@ -63,10 +98,4 @@ img.item {
     height: 16px;
     position: relative;
     top: 2px;
-}
-
-@media screen and (max-width: 500px) {
-    h1 {
-        font-size: 1.4em;
-    }
 }

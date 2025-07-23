@@ -1,60 +1,24 @@
-a:hover {
-    text-decoration: underline dashed;
+a {
+    color: inherit;
 }
 
-#main {
-    gap: 8px;
+h2.date {
+    color: #b0ffb0;
+    border-bottom: 1px solid #3e3e3e;
+    padding-bottom: 0.5rem;
 }
 
-main {
-    display: flex;
-    margin: 8px;
+article {
+    background-color: #2a2a2a;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
 }
 
-#main {
-    flex-direction: column-reverse;
-    flex-basis: 100%;
-}
-
-#main .container {
-    flex-direction: column;
-    background-color: #262a34;
-    border: 2px solid #7c4dff;
-    border-radius: 16px;
-}
-
-h2 {
-    font-weight: 400;
-    color: #ccc;
-    padding: 8px;
-    border-bottom: 1px solid #7c4dff;
-    border-radius: 16px 16px 0 0;
-}
-
-h3 {
-    margin: 12px;
-}
-
-p {
-    margin: 8px 12px;
-}
-
-ul {
-    padding-left: 24px;
-    margin: 0;
-}
-
-li {
-    margin: 4px 0;
-}
-
-.obj {
-    margin-top: 12px;
-}
-
-.data {
-    padding: 4px;
-    padding-bottom: 12px;
+.data p,
+.data li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .uncommon {
@@ -127,15 +91,4 @@ li {
 
 .effect.regeneration {
     color: #cc5ba0;
-}
-
-
-@media screen and (max-width: 800px) {
-    main {
-        flex-direction: column;
-    }
-
-    #side {
-        position: static;
-    }
 }
