@@ -73,6 +73,20 @@ p {
     margin: .5rem 0;
 }
 
+a {
+    color: #f5d75b;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #ffef9d;
+}
+
+main a:visited {
+    color: #91a4d8;
+}
+
 strong {
     color: #b0b;
     font-size: 1.25rem;
@@ -96,6 +110,7 @@ img.item {
     image-rendering: pixelated;
     width: 16px;
     height: 16px;
-    position: relative;
-    top: 2px;
+    vertical-align: middle;
+    /* position: relative;
+    top: 2px; */
 }
