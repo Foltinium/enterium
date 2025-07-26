@@ -62,7 +62,7 @@ const data = [
             { name: "Кость", icon: "items/bone", count: "1", base: 0.007, biome: "Все" },
             { name: "Морская трава", icon: "items/seagrass", count: "1", base: 0.006, biome: "Океаны и реки, кроме замёрзших" },
             { name: "Кусочек золота", icon: "items/gold_nugget", count: "2-3", base: 0.005, biome: "Реки" },
-            { name: "Ламинария", icon: "items/kelp", count: "1", base: 0.004, biome: "Обычные и холодные океаны" },
+            { name: "Ламинария", icon: "items/kelp", count: "1", base: 0.004, biome: "Океаны, кроме тёплых и замёрзших" },
             { name: "Морской огурец", icon: "items/sea_pickle", count: "1-2", base: 0.0035, biome: "Тёплые океаны" },
             { name: "Кусочек железа", icon: "items/iron_nugget", count: "1-2", base: 0.003, biome: "Океаны" },
         ]
@@ -76,7 +76,7 @@ const data = [
             { name: "Комок глины", icon: "items/clay_ball", count: "2-3", base: 0.01, biome: "Реки" },
             { name: "Сахарный тростник", icon: "items/sugar_cane", count: "1-2", base: 0.0095, biome: "Пляжи и реки" },
             { name: "Кактус", icon: "blocks/cactus_side", count: "1", base: 0.0085, biome: "Пустоши и пустыни" },
-            { name: "Ламинария", icon: "items/kelp", count: "1-2", base: 0.007, biome: "Обычные и холодные океаны" },
+            { name: "Ламинария", icon: "items/kelp", count: "1-2", base: 0.007, biome: "Океаны, кроме тёплых и замёрзших" },
             { name: "Морская трава", icon: "items/seagrass", count: "1-2", base: 0.006, biome: "Океаны и реки, кроме замёрзших" },
             { name: "Морской огурец", icon: "items/sea_pickle", count: "2-3", base: 0.005, biome: "Тёплые океаны" },
             { name: "Кусочек золота", icon: "items/gold_nugget", count: "1-3", base: 0.0045, biome: "Все" },

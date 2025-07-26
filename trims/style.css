@@ -21,7 +21,7 @@ a {
 }
 
 .trim {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .material.amethyst {
@@ -96,4 +96,9 @@ a {
 
 .effect.regeneration {
     color: #cc5ba0;
+}
+
+img.head {
+    width: 24px;
+    height: 24px;
 }
