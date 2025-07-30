@@ -1,0 +1,105 @@
+.uncommon {
+    color: #ffff55;
+}
+
+.rare {
+    color: #55ffff;
+}
+
+.epic {
+    color: #ff55ff;
+}
+
+
+
+.trim,
+.material,
+.effect {
+    font-weight: bold;
+}
+
+.trim {
+    font-size: 1.2rem;
+}
+
+.material.amethyst {
+    color: #c98ff3;
+}
+
+.material.copper {
+    color: #e3826c;
+}
+
+.material.diamond {
+    color: #cbfff5;
+}
+
+.material.emerald {
+    color: #82f6ad;
+}
+
+.material.gold {
+    color: #fffd90;
+}
+
+.material.iron {
+    color: #c5d2d4;
+}
+
+.material.lapis {
+    color: #416e97;
+}
+
+.material.quartz {
+    color: #f2efed;
+}
+
+.material.netherite {
+    color: #5a575a;
+}
+
+.material.redstone {
+    color: #e62008;
+}
+
+.material.resin {
+    color: #ffc354;
+}
+
+
+
+.effect.dolphins_grace {
+    color: #88a3be;
+}
+
+.effect.conduit_power {
+    color: #1dbfcd;
+}
+
+.effect.speed {
+    color: #33ebff;
+}
+
+.effect.slowness {
+    color: #89addd;
+}
+
+.effect.strength {
+    color: #fcc500;
+}
+
+.effect.weakness {
+    color: #474c43;
+}
+
+.effect.regeneration {
+    color: #cc5ba0;
+}
+
+.effect.health_boost {
+    color: #f57c23;
+}
+
+.effect.resistance {
+    color: #8f45ed;
+}
