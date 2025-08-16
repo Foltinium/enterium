@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../main.css">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../favicon.png" type="image/png">
     <title>Enterium | Лут и добыча</title>
 </head>
 
@@ -17,64 +18,49 @@
     </header>
 
     <nav>
-        <a href="../index.html">Главная</a>
-        <!-- <a href="loot.html">Лут</a>
-        <a href="mobs.html">Мобы</a>
-        <a href="blocks.html">Блоки</a>
-        <a href="mechanics.html">Механики</a> -->
+        <ul>
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="#mechanics">Механика</a></li>
+            <li><a href="#changes">Изменения</a></li>
+        </ul>
     </nav>
 
     <main>
-        <h1>Лут и добыча</h1>
-
-        <section>
-            <h2>Общие принципы</h2>
-            <p>
-                Датапак изменяет поведение добычи блоков и выпадения предметов. Основная цель — реалистичность и
-                введение редких, но обоснованных находок при добыче.
-            </p>
-        </section>
-
-        <section>
-            <h2>Изменения дропа блоков</h2>
-            <p>
-                Добываемый блок можно получить со 100% вероятностью, если добывать инструментом, зачарованным на
-                шёлковое касание.
-            </p>
-            <p>
-                Зачарование "Удача" даёт множитель к шансу дропа: для первого уровня множитель равен x1.3, для второго —
-                x1.65, для третьего — x2
-            </p>
-            <table id="loot-table">
-                <thead>
-                    <tr>
-                        <th rowspan="2">Блок</th>
-                        <th rowspan="2">Предмет</th>
-                        <th rowspan="2">Количество</th>
-                        <th colspan="4">Шансы (%)</th>
-                        <th rowspan="2">Биом</th>
-                    </tr>
-                    <tr id="head">
-                        <th>Без удачи</th>
-                        <th>Удача I</th>
-                        <th>Удача II</th>
-                        <th>Удача III</th>
-                    </tr>
-                </thead>
-            </table>
-
-        </section>
-
-        <!-- <section>
-            <h2>Изменения дропа с мобов</h2>
-            <p>Этот раздел описывает случаи, когда датапак модифицирует награды за убийство мобов.</p>
+        <aside>
+            <h2>Категории изменений</h2>
             <ul>
-                <li>Скелет может дропнуть сломанный лук с меньшим шансом.</li>
-                <li>Зомби чаще дропают гнилую плоть, реже — кожаную броню.</li>
-                <li>Крипер может дропнуть порох с шансом, зависящим от урона.</li>
-                <li>Паук иногда дропает паутину вместо ниток.</li>
+                <li><a href="../changelog/changelog.html">Общий список изменений</a></li>
+                <li><b>>>Лут и добыча<< </b>
+                </li>
+                <li><a href="../trims/trims.html">Кузнечные шаблоны</a></li>
             </ul>
-        </section> -->
+        </aside>
+        <div class="content">
+            <h1>Лут и добыча</h1>
+
+            <section id="mechanics">
+                <h2>Механика</h2>
+                <p>
+                    Датапак изменяет поведение добычи блоков и выпадения предметов. Основная цель — реалистичность и
+                    введение редких, но обоснованных находок при добыче.
+                </p>
+                <p>
+                    Добываемый блок можно получить со 100% вероятностью, если добывать инструментом, зачарованным на
+                    шёлковое касание.
+                </p>
+                <p>
+                    Зачарование "Удача" даёт множитель к шансу дропа: для первого уровня множитель равен x1.3, для
+                    второго —
+                    x1.65, для третьего — x2.
+                </p>
+            </section>
+
+            <section id="changes">
+                <h2>Изменения</h2>
+
+                <div id="loot-cards"></div>
+            </section>
+        </div>
     </main>
 
     <footer>

@@ -1,5 +1,9 @@
-a {
+header a {
     color: inherit;
+}
+
+h1 {
+    color: #b0ffb0;
 }
 
 img.head {

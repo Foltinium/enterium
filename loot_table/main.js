@@ -122,68 +122,87 @@ function formatChance(value) {
     return Number.isFinite(value) ? parseFloat(value.toPrecision(12)) : "";
 }
 
-function fillLootTable(data) {
-    const table = document.getElementById("loot-table");
+function createCard(data) {
+    const container = document.getElementById("loot-cards");
 
     data.forEach(block => {
+        const blockArticle = document.createElement("article");
+        blockArticle.classList.add("loot-block");
+
+        const header = document.createElement("button");
+        header.classList.add("loot-header");
+        header.innerHTML = `<img src="../assets/${block.icon}.png" alt="" class="item">${block.name}`;
+
+        const content = document.createElement("div");
+        content.classList.add("loot-content");
+
+        const table = document.createElement("table");
+        const thead = `
+            <thead>
+                <tr>
+                    <th rowspan="2">Предмет</th>
+                    <th rowspan="2">Кол-во</th>
+                    <th colspan="4">Шансы (%)</th>
+                    <th rowspan="2">Биом</th>
+                </tr>
+                <tr>
+                    <th>Без удачи</th>
+                    <th>Удача I</th>
+                    <th>Удача II</th>
+                    <th>Удача III</th>
+                </tr>
+            </thead>
+        `;
+        table.innerHTML = thead;
+
         const tbody = document.createElement("tbody");
-
-        const groupedDrops = [];
-        let currentBiome = null;
-        let currentGroup = [];
-
         block.drops.forEach(drop => {
-            if (drop.biome !== currentBiome) {
-                if (currentGroup.length) groupedDrops.push(currentGroup);
-                currentGroup = [drop];
-                currentBiome = drop.biome;
-            } else {
-                currentGroup.push(drop);
-            }
-        });
-        if (currentGroup.length) groupedDrops.push(currentGroup);
+            const base = drop.customChances ? drop.customChances[0] : drop.base * 100;
+            const chance1 = drop.customChances ? drop.customChances[1] : drop.base * 1.3 * 100;
+            const chance2 = drop.customChances ? drop.customChances[2] : drop.base * 1.65 * 100;
+            const chance3 = drop.customChances ? drop.customChances[3] : drop.base * 2 * 100;
 
-        let dropIndex = 0;
-
-        groupedDrops.forEach(group => {
-            group.forEach((drop, i) => {
-                const row = document.createElement("tr");
-
-                if (dropIndex === 0) {
-                    const blockCell = document.createElement("td");
-                    blockCell.rowSpan = block.drops.length;
-                    blockCell.innerHTML = `<img src="../assets/${block.icon}.png" class="item"> ${block.name}`;
-                    row.appendChild(blockCell);
-                }
-
-                const base = drop.customChances ? drop.customChances[0] : drop.base * 100;
-                const chance1 = drop.customChances ? drop.customChances[1] : drop.base * 1.3 * 100;
-                const chance2 = drop.customChances ? drop.customChances[2] : drop.base * 1.65 * 100;
-                const chance3 = drop.customChances ? drop.customChances[3] : drop.base * 2 * 100;
-
-                row.innerHTML += `
-                    <td><img src="../assets/${drop.icon}.png" class="item"> ${drop.name}</td>
-                    <td>${drop.count}</td>
-                    <td>${formatChance(base)}</td>
-                    <td>${formatChance(chance1)}</td>
-                    <td>${formatChance(chance2)}</td>
-                    <td>${formatChance(chance3)}</td>
-`;
-
-                if (i === 0) {
-                    const biomeCell = document.createElement("td");
-                    biomeCell.rowSpan = group.length;
-                    biomeCell.textContent = drop.biome;
-                    row.appendChild(biomeCell);
-                }
-
-                tbody.appendChild(row);
-                dropIndex++;
-            });
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td><img src="../assets/${drop.icon}.png" alt="" class="item">${drop.name}</td>
+                <td>${drop.count}</td>
+                <td>${formatChance(base)}</td>
+                <td>${formatChance(chance1)}</td>
+                <td>${formatChance(chance2)}</td>
+                <td>${formatChance(chance3)}</td>
+                <td>${drop.biome}</td>
+            `;
+            tbody.appendChild(row);
         });
 
         table.appendChild(tbody);
+        content.appendChild(table);
+
+        header.addEventListener("click", () => {
+            header.classList.toggle("open");
+            if (content.classList.contains("open")) {
+                content.style.maxHeight = content.scrollHeight + "px";
+                requestAnimationFrame(() => {
+                    content.style.maxHeight = "0";
+                });
+
+                content.addEventListener("transitionend", function handler() {
+                    content.classList.remove("open");
+                    content.removeEventListener("transitionend", handler);
+                });
+            } else {
+                content.style.maxHeight = "0";
+                requestAnimationFrame(() => {
+                    content.classList.add("open");
+                    content.style.maxHeight = content.scrollHeight + "px";
+                });
+            }
+        });
+
+        blockArticle.appendChild(header);
+        blockArticle.appendChild(content);
+        container.appendChild(blockArticle);
     });
 }
 
-fillLootTable(data);
+createCard(data);
